@@ -28,5 +28,7 @@ a'b's + ab's + 'abs + abs
 ( a's ) + ( bs )
 a's + bs
 And(a,Not(s)) + And(b,s)
+
+With reference to: http://nand2tetris-questions-and-answers-forum.32033.n3.nabble.com/Mux-Proof-tp3442194p4026028.html (Jan 07, 2013; 10:15pm)
 */
 }
