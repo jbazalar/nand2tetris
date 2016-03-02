@@ -14,5 +14,19 @@ CHIP Mux {
     OUT out;
 
     PARTS:
-    // Put your code here:
+    Not(in=sel,out=nots);
+	And(a=a,b=nots,out=and1);
+	And(a=b,b=sel,out=and2);
+	Or(a=and1,b=and2,out=out);
+	
+/*
+a,b,sel where output = 1
+100 + 110 + 011 + 111
+a'b's + ab's + 'abs + abs 
+(a'b's + ab's) + ('abs + abs)
+( a's('b+b) ) + ( bs('a+a) )
+( a's ) + ( bs )
+a's + bs
+And(a,Not(s)) + And(b,s)
+*/
 }
